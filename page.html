@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Premium Join Telegram Link</title>
    <script>
-    // Function to check if browser is Chrome
-    function isChrome() {
-      return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    }
+  (function() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // Redirect if not Chrome
-    if (!isChrome()) {
-      document.write('<h2 style="color: red; text-align: center; margin-top: 50px;">This site is only accessible in Google Chrome. Please open it in Chrome.</h2>');
-      throw new Error("Non-Chrome browser detected");
+    // Check if the site is opened in Facebook or Instagram in-app browser
+    if (userAgent.indexOf("FBAN") > -1 || userAgent.indexOf("FBAV") > -1 || userAgent.indexOf("Instagram") > -1) {
+      // Redirect to Chrome
+      var url = window.location.href;
+      window.location.href = "googlechrome://" + url.replace(/^https?:\/\//, "");
+      
+      // If Google Chrome redirection fails, suggest user to open in Chrome
+      setTimeout(function() {
+        alert("For better experience, please open this link in Google Chrome.");
+      }, 3000);
     }
-  </script>
+  })();
+</script>
+
   <style>
     /* बेस स्टाइलिंग */
     body {
