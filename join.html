@@ -125,14 +125,6 @@
   <!-- Navbar -->
   <nav class="navbar">
     <a href="#" class="logo">📌 Telegram Join</a>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC1WD49MFB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SC1WD49MFB');
-    </script>
   </nav>
 
   <!-- Main content -->
@@ -179,7 +171,6 @@
 
   <!-- JavaScript for button click functionality -->
   <script>
-    // Get the current click count from localStorage, default to 0 if not found
     let clickCount = {
       1: localStorage.getItem('click_1') || 0,
       2: localStorage.getItem('click_2') || 0,
@@ -188,7 +179,6 @@
       5: localStorage.getItem('click_5') || 0
     };
 
-    // Define the site and channel links for each button
     const links = {
       1: {
         site: 'https://example.com/site1', // Replace with actual site link
@@ -212,22 +202,17 @@
       }
     };
 
-    // Function to handle button clicks
     function handleButtonClick(buttonId) {
-      // Increment click count
       clickCount[buttonId]++;
-      // Save the updated click count back to localStorage
       localStorage.setItem(`click_${buttonId}`, clickCount[buttonId]);
 
-      // If click count is odd, open site link; if even, open channel link
       if (clickCount[buttonId] % 2 !== 0) {
-        window.open(links[buttonId].site, '_blank'); // Open site link for odd clicks
+        window.open(links[buttonId].site, '_blank');
       } else {
-        window.open(links[buttonId].channel, '_blank'); // Open channel link for even clicks
+        window.open(links[buttonId].channel, '_blank');
       }
     }
 
-    // Add click event listeners for each button
     document.getElementById('btn-1').addEventListener('click', function(event) {
       event.preventDefault();
       handleButtonClick(1);
@@ -245,3 +230,14 @@
 
     document.getElementById('btn-4').addEventListener('click', function(event) {
       event.preventDefault();
+      handleButtonClick(4);
+    });
+
+    document.getElementById('btn-5').addEventListener('click', function(event) {
+      event.preventDefault();
+      handleButtonClick(5);
+    });
+  </script>
+</body>
+</html>
+
