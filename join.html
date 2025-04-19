@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Premium Join Telegram Buttons</title>
   <style>
     body {
@@ -13,12 +13,38 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      text-align: center;
+    }
+
+    .navbar {
+      background: #000;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar .logo {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     .content {
-      padding-top: 60px;
+      text-align: center;
+      padding-top: 100px;
       flex: 1;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     .telegram-card {
@@ -34,12 +60,12 @@
       font-weight: bold;
       letter-spacing: 0.5px;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s;
-      background: linear-gradient(45deg, #0088cc, #00c6ff);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .telegram-card:hover {
       transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
     }
 
     .profile-img {
@@ -49,6 +75,12 @@
       object-fit: cover;
       border: 2px solid white;
     }
+
+    .btn-1 { background: linear-gradient(45deg, #0088cc, #00c6ff); }
+    .btn-2 { background: linear-gradient(45deg, #ff416c, #ff4b2b); }
+    .btn-3 { background: linear-gradient(45deg, #8e44ad, #c0392b); }
+    .btn-4 { background: linear-gradient(45deg, #27ae60, #2ecc71); }
+    .btn-5 { background: linear-gradient(45deg, #ff9a8b, #ff6a88, #ff99ac); }
 
     @media (max-width: 600px) {
       .telegram-card {
@@ -60,79 +92,167 @@
         height: 36px;
       }
     }
+
+    .footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: #ddd;
+    }
+
+    .privacy-text {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      padding: 10px 20px;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="logo">📌 Telegram Join</a>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC1WD49MFB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SC1WD49MFB');
+    </script>
+  </nav>
+
+  <!-- Main content -->
   <div class="content">
     <h1>Join Our Telegram Channels</h1>
 
-    <!-- 1 -->
-    <a href="#" class="telegram-card" onclick="
-      let c1 = localStorage.getItem('click_1') || 0;
-      c1 = parseInt(c1) + 1;
-      localStorage.setItem('click_1', c1);
-      window.open((c1 === 1 || c1 % 10 === 0) ? 'https://example.com/site1' : 'https://t.me/englishchannel', '_blank');
-    ">
+    <!-- Button for site and channel switching -->
+    <a href="#" id="btn-1" class="telegram-card btn-1">
       <img src="images/4.jpg" alt="din" class="profile-img">
       Hot English Video Link 😎
     </a>
 
-    <!-- 2 -->
-    <a href="#" class="telegram-card" onclick="
-      let c2 = localStorage.getItem('click_2') || 0;
-      c2 = parseInt(c2) + 1;
-      localStorage.setItem('click_2', c2);
-      window.open((c2 === 1 || c2 % 10 === 0) ? 'https://example.com/site2' : 'https://t.me/desichannel', '_blank');
-    ">
+    <a href="#" id="btn-2" class="telegram-card btn-2">
       <img src="images/3.jpg" alt="kun" class="profile-img">
       Viral 🥰 देसी वीडियो ज्वाइन करे 🌹
     </a>
 
-    <!-- 3 -->
-    <a href="#" class="telegram-card" onclick="
-      let c3 = localStorage.getItem('click_3') || 0;
-      c3 = parseInt(c3) + 1;
-      localStorage.setItem('click_3', c3);
-      window.open((c3 === 1 || c3 % 10 === 0) ? 'https://example.com/site3' : 'https://t.me/devchannel', '_blank');
-    ">
+    <a href="#" id="btn-3" class="telegram-card btn-3">
       <img src="images/2.jpg" alt="dev" class="profile-img">
       dev🌹देसी वायरल वीडियो ज्वाइन करे 🔗
     </a>
 
-    <!-- 4 -->
-    <a href="#" class="telegram-card" onclick="
-      let c4 = localStorage.getItem('click_4') || 0;
-      c4 = parseInt(c4) + 1;
-      localStorage.setItem('click_4', c4);
-      window.open((c4 === 1 || c4 % 10 === 0) ? 'https://example.com/site4' : 'https://t.me/bhabhichannel', '_blank');
-    ">
+    <a href="#" id="btn-4" class="telegram-card btn-4">
       <img src="images/1.jpg" alt="bhabhi" class="profile-img">
       🌹भाभी वीडियो ज्वाइन करे 🔗
     </a>
 
-    <!-- 5 -->
-    <a href="#" class="telegram-card" onclick="
-      let c5 = localStorage.getItem('click_5') || 0;
-      c5 = parseInt(c5) + 1;
-      localStorage.setItem('click_5', c5);
-      window.open((c5 === 1 || c5 % 10 === 0) ? 'https://example.com/site5' : 'https://t.me/hollywoodchannel', '_blank');
-    ">
+    <a href="#" id="btn-5" class="telegram-card btn-5">
       <img src="images/hollywood.jpg" alt="kd" class="profile-img">
       🔥Hollywood New Movie 😍
     </a>
 
-    <!-- 6 -->
-    <a href="#" class="telegram-card" onclick="
-      let c6 = localStorage.getItem('click_6') || 0;
-      c6 = parseInt(c6) + 1;
-      localStorage.setItem('click_6', c6);
-      window.open((c6 === 1 || c6 % 10 === 0) ? 'https://example.com/site6' : 'https://t.me/bollywoodchannel', '_blank');
-    ">
-      <img src="images/bollywood.jpg" alt="bollywood" class="profile-img">
-      🌹Bollywood Movie New 🔗
-    </a>
   </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="privacy-policy.html" target="_blank">Privacy Policy</a> |
+    <a href="terms-conditions.html" target="_blank">Terms and Conditions</a>
+    <p class="privacy-text">
+      This website does not store any personal data. We respect your privacy and ensure the best user experience. <br>
+      © 2025 All Rights Reserved. YourCompanyName
+    </p>
+  </footer>
+
+  <!-- JavaScript for button click functionality -->
+  <script>
+    // Get the current click count from localStorage, default to 0 if not found
+    let clickCount = {
+      1: localStorage.getItem('click_1') || 0,
+      2: localStorage.getItem('click_2') || 0,
+      3: localStorage.getItem('click_3') || 0,
+      4: localStorage.getItem('click_4') || 0,
+      5: localStorage.getItem('click_5') || 0
+    };
+
+    // Define the site and channel links for each button
+    const links = {
+      1: {
+        site: 'https://example.com/site1', // Replace with actual site link
+        channel: 'https://t.me/telegramchannel1' // Replace with actual channel link
+      },
+      2: {
+        site: 'https://example.com/site2',
+        channel: 'https://t.me/telegramchannel2'
+      },
+      3: {
+        site: 'https://example.com/site3',
+        channel: 'https://t.me/telegramchannel3'
+      },
+      4: {
+        site: 'https://example.com/site4',
+        channel: 'https://t.me/telegramchannel4'
+      },
+      5: {
+        site: 'https://example.com/site5',
+        channel: 'https://t.me/telegramchannel5'
+      }
+    };
+
+    // Function to handle button clicks
+    function handleButtonClick(buttonId) {
+      // Increment click count
+      clickCount[buttonId]++;
+      // Save the updated click count back to localStorage
+      localStorage.setItem(`click_${buttonId}`, clickCount[buttonId]);
+
+      // Check if the click count is odd or even and open the appropriate link
+      if (clickCount[buttonId] % 2 !== 0) {
+        window.open(links[buttonId].site, '_blank'); // Site link for odd clicks
+      } else {
+        window.open(links[buttonId].channel, '_blank'); // Telegram channel link for even clicks
+      }
+    }
+
+    // Add click event listeners for each button
+    document.getElementById('btn-1').addEventListener('click', function(event) {
+      event.preventDefault();
+      handleButtonClick(1);
+    });
+
+    document.getElementById('btn-2').addEventListener('click', function(event) {
+      event.preventDefault();
+      handleButtonClick(2);
+    });
+
+    document.getElementById('btn-3').addEventListener('click', function(event) {
+      event.preventDefault();
+      handleButtonClick(3);
+    });
+
+    document.getElementById('btn-4').addEventListener('click', function(event) {
+      event.preventDefault();
+      handleButtonClick(4);
+    });
+
+    document.getElementById('btn-5').addEventListener('click', function(event) {
+      event.preventDefault();
+      handleButtonClick(5);
+    });
+  </script>
 
 </body>
 </html>
