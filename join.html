@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Premium Join Telegram Buttons</title>
   <style>
     body {
@@ -124,11 +124,11 @@
 
   <nav class="navbar">
     <a href="#" class="logo">📌 Telegram Join</a>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC1WD49MFB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', 'G-SC1WD49MFB');
     </script>
@@ -137,35 +137,35 @@
   <div class="content">
     <h1>Join Our Telegram Channels</h1>
 
-    <a href="www.facbook.com" target="_blank" class="telegram-card btn-1">
+    <a href="https://www.facebook.com" target="_blank" class="telegram-card btn-1" onclick="buttonClicked('Hot English Video')">
       <img src="images/4.jpg" alt="din" class="profile-img">
-       Hot English Video Link 😎
+      Hot English Video Link 😎
     </a>
 
-    <a href="join.html" target="_blank" class="telegram-card btn-2">
+    <a href="join.html" target="_blank" class="telegram-card btn-2" onclick="buttonClicked('Desi Viral Video')">
       <img src="images/3.jpg" alt="kun" class="profile-img">
       Viral 🥰 देसी वीडियो ज्वाइन करे 🌹
     </a>
 
-
-    <a href="new.html" target="_blank" class="telegram-card btn-4">
+    <a href="new.html" target="_blank" class="telegram-card btn-4" onclick="buttonClicked('Dev Desi Video')">
       <img src="images/2.jpg" alt="dev" class="profile-img">
       dev🌹देसी वायरल वीडियो ज्वाइन करे 🔗
     </a>
 
-    <a href="chanel.html" target="_blank" class="telegram-card btn-5">
+    <a href="chanel.html" target="_blank" class="telegram-card btn-5" onclick="buttonClicked('Bhabhi Video')">
       <img src="images/1.jpg" alt="bhabhi" class="profile-img">
       🌹भाभी वीडियो ज्वाइन करे 🔗
     </a>
-    <a href="group.html" target="_blank" class="telegram-card btn-3">
-        <img src="images/hollywood.jpg" alt="kd" class="profile-img">
-         🔥Hollywood New Movie 😍
-      </a>
 
-    <a href="chanel.html" target="_blank" class="telegram-card btn-5">
-        <img src="images/bollywood.jpg" alt="bhabhi" class="profile-img">
-        🌹Bollywood Movie New  🔗
-      </a>
+    <a href="group.html" target="_blank" class="telegram-card btn-3" onclick="buttonClicked('Hollywood Movie')">
+      <img src="images/hollywood.jpg" alt="kd" class="profile-img">
+      🔥Hollywood New Movie 😍
+    </a>
+
+    <a href="chanel.html" target="_blank" class="telegram-card btn-5" onclick="buttonClicked('Bollywood Movie')">
+      <img src="images/bollywood.jpg" alt="bolly" class="profile-img">
+      🌹Bollywood Movie New 🔗
+    </a>
   </div>
 
   <footer class="footer">
@@ -176,6 +176,12 @@
       © 2025 All Rights Reserved. YourCompanyName
     </p>
   </footer>
+
+  <script>
+    function buttonClicked(name) {
+      alert("You are joining: " + name + " 🎉");
+    }
+  </script>
 
 </body>
 </html>
