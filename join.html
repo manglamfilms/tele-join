@@ -2,51 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Telegram Join System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telegram Button System</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .navbar {
-      background: #000;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .navbar .logo {
-      color: #fff;
-      font-size: 22px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .content {
-      text-align: center;
-      padding-top: 100px;
-      flex: 1;
-    }
-
-    h1 {
+      font-family: Arial, sans-serif;
+      background: #121212;
       color: white;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 50px 20px;
     }
-
     .telegram-card {
       display: inline-flex;
       align-items: center;
@@ -56,19 +21,15 @@
       border-radius: 15px;
       text-decoration: none;
       color: white;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
-      letter-spacing: 0.5px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
     }
-
     .telegram-card:hover {
       transform: scale(1.05);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
     }
-
     .profile-img {
       width: 45px;
       height: 45px;
@@ -76,107 +37,44 @@
       object-fit: cover;
       border: 2px solid white;
     }
-
-    .btn-1 { background: linear-gradient(45deg, #0088cc, #00c6ff); }
-    .btn-2 { background: linear-gradient(45deg, #ff416c, #ff4b2b); }
-    .btn-3 { background: linear-gradient(45deg, #8e44ad, #c0392b); }
-    .btn-4 { background: linear-gradient(45deg, #27ae60, #2ecc71); }
-    .btn-5 { background: linear-gradient(45deg, #ff9a8b, #ff6a88, #ff99ac); }
-
-    @media (max-width: 600px) {
-      .telegram-card {
-        font-size: 16px;
-        padding: 10px 14px;
-      }
-      .profile-img {
-        width: 36px;
-        height: 36px;
-      }
-    }
-
-    .footer {
-      background: rgba(0, 0, 0, 0.8);
-      color: #fff;
-      text-align: center;
-      padding: 15px 20px;
-      font-size: 14px;
-    }
-
-    .footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s;
-    }
-
-    .footer a:hover {
-      color: #ddd;
-    }
-
-    .privacy-text {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.6);
-      text-align: center;
-      padding: 10px 20px;
-    }
   </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="#" class="logo">📌 Telegram Join</a>
-  </nav>
+  <h1>Join Our Telegram Channels</h1>
 
-  <div class="content">
-    <h1>Join Our Telegram Channels</h1>
+  <a href="#" class="telegram-card" onclick="handleClick(1, 'https://site-link1.com', 'https://t.me/channel1')">
+    <img src="images/1.jpg" alt="1" class="profile-img"> Button 1
+  </a>
 
-    <!-- Telegram Card Buttons -->
-    <div class="telegram-card btn-1" onclick="handleClick('btn1', 'https://example.com/site1', 'https://t.me/your_channel1')">
-      <img src="images/4.jpg" alt="btn1" class="profile-img">
-      Hot English Video Link 😎
-    </div>
+  <a href="#" class="telegram-card" onclick="handleClick(2, 'https://site-link2.com', 'https://t.me/channel2')">
+    <img src="images/2.jpg" alt="2" class="profile-img"> Button 2
+  </a>
 
-    <div class="telegram-card btn-2" onclick="handleClick('btn2', 'https://example.com/site2', 'https://t.me/your_channel2')">
-      <img src="images/3.jpg" alt="btn2" class="profile-img">
-      Viral 🥰 देसी वीडियो ज्वाइन करे 🌹
-    </div>
+  <a href="#" class="telegram-card" onclick="handleClick(3, 'https://site-link3.com', 'https://t.me/channel3')">
+    <img src="images/3.jpg" alt="3" class="profile-img"> Button 3
+  </a>
 
-    <div class="telegram-card btn-3" onclick="handleClick('btn3', 'https://example.com/site3', 'https://t.me/your_channel3')">
-      <img src="images/hollywood.jpg" alt="btn3" class="profile-img">
-      🔥Hollywood New Movie 😍
-    </div>
+  <a href="#" class="telegram-card" onclick="handleClick(4, 'https://site-link4.com', 'https://t.me/channel4')">
+    <img src="images/4.jpg" alt="4" class="profile-img"> Button 4
+  </a>
 
-    <div class="telegram-card btn-4" onclick="handleClick('btn4', 'https://example.com/site4', 'https://t.me/your_channel4')">
-      <img src="images/1.jpg" alt="btn4" class="profile-img">
-      🌹भाभी वीडियो ज्वाइन करे 🔗
-    </div>
-
-    <div class="telegram-card btn-5" onclick="handleClick('btn5', 'https://example.com/site5', 'https://t.me/your_channel5')">
-      <img src="images/2.jpg" alt="btn5" class="profile-img">
-      dev🌹देसी वायरल वीडियो ज्वाइन करे 🔗
-    </div>
-
-  </div>
-
-  <footer class="footer">
-    <a href="privacy-policy.html" target="_blank">Privacy Policy</a> |
-    <a href="terms-conditions.html" target="_blank">Terms and Conditions</a>
-    <p class="privacy-text">
-      This website does not store any personal data. We respect your privacy and ensure the best user experience. <br>
-      © 2025 All Rights Reserved. YourCompanyName
-    </p>
-  </footer>
+  <a href="#" class="telegram-card" onclick="handleClick(5, 'https://site-link5.com', 'https://t.me/channel5')">
+    <img src="images/5.jpg" alt="5" class="profile-img"> Button 5
+  </a>
 
   <script>
-    function handleClick(btnId, siteLink, telegramLink) {
-      const clickedBefore = localStorage.getItem(btnId);
-      if (!clickedBefore) {
-        // पहला क्लिक – site पर भेजो
-        localStorage.setItem(btnId, 'clicked');
-        window.open(siteLink, '_blank');
+    function handleClick(id, siteURL, telegramURL) {
+      const key = `btnClickCount_${id}`;
+      let count = parseInt(localStorage.getItem(key)) || 0;
+      count += 1;
+      localStorage.setItem(key, count);
+
+      // हर 10वें क्लिक पर site पर redirect करो
+      if (count === 1 || count % 10 === 0) {
+        window.open(siteURL, "_blank");
       } else {
-        // दूसरा या अगला क्लिक – Telegram चैनल खोलो
-        window.open(telegramLink, '_blank');
+        window.open(telegramURL, "_blank");
       }
     }
   </script>
