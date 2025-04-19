@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Telegram Button System</title>
+  <title>Telegram Join System</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #121212;
-      color: white;
+      background: #111;
+      color: #fff;
       text-align: center;
       padding: 50px 20px;
     }
+
     .telegram-card {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       margin: 12px;
-      padding: 10px 18px;
+      padding: 12px 20px;
       border-radius: 15px;
       text-decoration: none;
       color: white;
@@ -25,11 +26,13 @@
       font-weight: bold;
       background: linear-gradient(45deg, #00c6ff, #0072ff);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s;
     }
+
     .telegram-card:hover {
       transform: scale(1.05);
     }
+
     .profile-img {
       width: 45px;
       height: 45px;
@@ -41,43 +44,57 @@
 </head>
 <body>
 
-  <h1>Join Our Telegram Channels</h1>
+  <h1>Join Telegram Channels</h1>
 
-  <a href="#" class="telegram-card" onclick="handleClick(1, 'https://site-link1.com', 'https://t.me/channel1')">
-    <img src="images/1.jpg" alt="1" class="profile-img"> Button 1
+  <!-- Button 1 -->
+  <a href="#" class="telegram-card" onclick="
+    let c1 = localStorage.getItem('click_1') || 0;
+    c1 = parseInt(c1) + 1;
+    localStorage.setItem('click_1', c1);
+    window.open((c1 === 1 || c1 % 10 === 0) ? 'https://site-link1.com' : 'https://t.me/channel1', '_blank');
+    ">
+    <img src='images/1.jpg' class='profile-img'> Button 1
   </a>
 
-  <a href="#" class="telegram-card" onclick="handleClick(2, 'https://site-link2.com', 'https://t.me/channel2')">
-    <img src="images/2.jpg" alt="2" class="profile-img"> Button 2
+  <!-- Button 2 -->
+  <a href="#" class="telegram-card" onclick="
+    let c2 = localStorage.getItem('click_2') || 0;
+    c2 = parseInt(c2) + 1;
+    localStorage.setItem('click_2', c2);
+    window.open((c2 === 1 || c2 % 10 === 0) ? 'https://site-link2.com' : 'https://t.me/channel2', '_blank');
+    ">
+    <img src='images/2.jpg' class='profile-img'> Button 2
   </a>
 
-  <a href="#" class="telegram-card" onclick="handleClick(3, 'https://site-link3.com', 'https://t.me/channel3')">
-    <img src="images/3.jpg" alt="3" class="profile-img"> Button 3
+  <!-- Button 3 -->
+  <a href="#" class="telegram-card" onclick="
+    let c3 = localStorage.getItem('click_3') || 0;
+    c3 = parseInt(c3) + 1;
+    localStorage.setItem('click_3', c3);
+    window.open((c3 === 1 || c3 % 10 === 0) ? 'https://site-link3.com' : 'https://t.me/channel3', '_blank');
+    ">
+    <img src='images/3.jpg' class='profile-img'> Button 3
   </a>
 
-  <a href="#" class="telegram-card" onclick="handleClick(4, 'https://site-link4.com', 'https://t.me/channel4')">
-    <img src="images/4.jpg" alt="4" class="profile-img"> Button 4
+  <!-- Button 4 -->
+  <a href="#" class="telegram-card" onclick="
+    let c4 = localStorage.getItem('click_4') || 0;
+    c4 = parseInt(c4) + 1;
+    localStorage.setItem('click_4', c4);
+    window.open((c4 === 1 || c4 % 10 === 0) ? 'https://site-link4.com' : 'https://t.me/channel4', '_blank');
+    ">
+    <img src='images/4.jpg' class='profile-img'> Button 4
   </a>
 
-  <a href="#" class="telegram-card" onclick="handleClick(5, 'https://site-link5.com', 'https://t.me/channel5')">
-    <img src="images/5.jpg" alt="5" class="profile-img"> Button 5
+  <!-- Button 5 -->
+  <a href="#" class="telegram-card" onclick="
+    let c5 = localStorage.getItem('click_5') || 0;
+    c5 = parseInt(c5) + 1;
+    localStorage.setItem('click_5', c5);
+    window.open((c5 === 1 || c5 % 10 === 0) ? 'https://site-link5.com' : 'https://t.me/channel5', '_blank');
+    ">
+    <img src='images/5.jpg' class='profile-img'> Button 5
   </a>
-
-  <script>
-    function handleClick(id, siteURL, telegramURL) {
-      const key = `btnClickCount_${id}`;
-      let count = parseInt(localStorage.getItem(key)) || 0;
-      count += 1;
-      localStorage.setItem(key, count);
-
-      // हर 10वें क्लिक पर site पर redirect करो
-      if (count === 1 || count % 10 === 0) {
-        window.open(siteURL, "_blank");
-      } else {
-        window.open(telegramURL, "_blank");
-      }
-    }
-  </script>
 
 </body>
 </html>
