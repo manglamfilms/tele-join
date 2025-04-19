@@ -202,10 +202,10 @@
     };
 
     function handleButtonClick(buttonId) {
-      clickCount[buttonId] = (clickCount[buttonId] || 0) + 1;
+      clickCount[buttonId]++;
       localStorage.setItem(`click_${buttonId}`, clickCount[buttonId]);
 
-      if (clickCount[buttonId] % 2 !== 0) {
+      if (clickCount[buttonId] % 2 === 1) {
         window.open(links[buttonId].site, '_blank');
       } else {
         window.open(links[buttonId].channel, '_blank');
