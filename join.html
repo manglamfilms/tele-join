@@ -131,7 +131,7 @@
   <div class="content">
     <h1>Join Our Telegram Channels</h1>
 
-    <!-- Button for site and channel switching -->
+    <!-- Buttons -->
     <a href="#" id="btn-1" class="telegram-card btn-1">
       <img src="images/4.jpg" alt="din" class="profile-img">
       Hot English Video Link 😎
@@ -156,7 +156,6 @@
       <img src="images/hollywood.jpg" alt="kd" class="profile-img">
       🔥Hollywood New Movie 😍
     </a>
-
   </div>
 
   <!-- Footer -->
@@ -169,20 +168,20 @@
     </p>
   </footer>
 
-  <!-- JavaScript for button click functionality -->
+  <!-- JavaScript -->
   <script>
     let clickCount = {
-      1: localStorage.getItem('click_1') || 0,
-      2: localStorage.getItem('click_2') || 0,
-      3: localStorage.getItem('click_3') || 0,
-      4: localStorage.getItem('click_4') || 0,
-      5: localStorage.getItem('click_5') || 0
+      1: parseInt(localStorage.getItem('click_1')) || 0,
+      2: parseInt(localStorage.getItem('click_2')) || 0,
+      3: parseInt(localStorage.getItem('click_3')) || 0,
+      4: parseInt(localStorage.getItem('click_4')) || 0,
+      5: parseInt(localStorage.getItem('click_5')) || 0
     };
 
     const links = {
       1: {
-        site: 'https://choadsoa.top/4/9231682', // Replace with actual site link
-        channel: 'https://t.me/+5eO2paO2c4wzOTVl' // Replace with actual channel link
+        site: 'https://choadsoa.top/4/9231682',
+        channel: 'https://t.me/+5eO2paO2c4wzOTVl'
       },
       2: {
         site: 'https://choadsoa.top/4/9231682',
@@ -203,7 +202,7 @@
     };
 
     function handleButtonClick(buttonId) {
-      clickCount[buttonId]++;
+      clickCount[buttonId] = (clickCount[buttonId] || 0) + 1;
       localStorage.setItem(`click_${buttonId}`, clickCount[buttonId]);
 
       if (clickCount[buttonId] % 2 !== 0) {
@@ -213,31 +212,12 @@
       }
     }
 
-    document.getElementById('btn-1').addEventListener('click', function(event) {
-      event.preventDefault();
-      handleButtonClick(1);
-    });
-
-    document.getElementById('btn-2').addEventListener('click', function(event) {
-      event.preventDefault();
-      handleButtonClick(2);
-    });
-
-    document.getElementById('btn-3').addEventListener('click', function(event) {
-      event.preventDefault();
-      handleButtonClick(3);
-    });
-
-    document.getElementById('btn-4').addEventListener('click', function(event) {
-      event.preventDefault();
-      handleButtonClick(4);
-    });
-
-    document.getElementById('btn-5').addEventListener('click', function(event) {
-      event.preventDefault();
-      handleButtonClick(5);
-    });
+    for (let i = 1; i <= 5; i++) {
+      document.getElementById(`btn-${i}`).addEventListener('click', function (event) {
+        event.preventDefault();
+        handleButtonClick(i);
+      });
+    }
   </script>
 </body>
 </html>
-
