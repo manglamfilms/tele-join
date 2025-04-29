@@ -247,28 +247,28 @@
 </script>
 
 <script>
-  window.onload = function () {
-    const ua = navigator.userAgent.toLowerCase();
-
-    // Detect Instagram, Facebook, or Telegram browsers
-    if (ua.includes("instagram") || ua.includes("fbav") || ua.includes("telegram")) {
-      const currentUrl = window.location.href;
-      const chromeIntent = "intent://" + currentUrl.replace(/^https?:\/\//, '') + "#Intent;scheme=https;package=com.android.chrome;end";
-
-      document.body.innerHTML = `
-        <div style="text-align:center; padding:50px; color:white; background-color:black; height:100vh;">
-          <h2>🚫 Sorry!</h2>
-          <p>This site is not supported in this browser.</p>
-          <p>Please open it in <strong>Google Chrome</strong> for the best experience.</p>
-          <br>
-          <a href="${chromeIntent}" style="background:#00f0ff; color:black; padding:14px 24px; font-size:18px; border-radius:12px; text-decoration:none; font-weight:bold;">
-            👉 Open in Chrome
-          </a>
-        </div>
-      `;
-    }
-  };
-</script>
+    window.onload = function () {
+      const ua = navigator.userAgent.toLowerCase();
+  
+      // Detect Instagram, Facebook, or Telegram browsers
+      if (ua.includes("instagram") || ua.includes("fbav") || ua.includes("telegram")) {
+        const currentUrl = window.location.href;
+        const chromeIntent = "intent://" + currentUrl.replace(/^https?:\/\//, '') + "#Intent;scheme=https;package=com.android.chrome;end";
+  
+        document.body.innerHTML = `
+          <div style="text-align:center; padding:50px; color:white; background-color:black; height:100vh;">
+            <h2>Open Chrome Sorry!</h2>
+            <p>This site is not supported in this browser.</p>
+            <p>Please open it in <strong>Google Chrome</strong> for the best experience.</p>
+            <br>
+            <a href="${chromeIntent}" style="background:#00f0ff; color:black; padding:14px 24px; font-size:18px; border-radius:12px; text-decoration:none; font-weight:bold;">
+              👉 Open in Chrome
+            </a>
+          </div>
+        `;
+      }
+    };
+  </script>
 
 
 
