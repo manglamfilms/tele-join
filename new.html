@@ -246,17 +246,24 @@
   gtag('config', 'G-6CXNY0XX6R');
 </script>
 
-  <script>
+<script>
   window.onload = function() {
     const ua = navigator.userAgent.toLowerCase();
 
     // Detect Telegram, Instagram, or Facebook in-app browsers
     if (ua.includes("instagram") || ua.includes("fbav") || ua.includes("telegram")) {
+      const currentUrl = window.location.href;
+      const chromeIntent = "googlechrome://" + currentUrl.replace(/^https?:\/\//, '');
+
       document.body.innerHTML = `
         <div style="text-align:center; padding:50px; color:white; background-color:black; height:100vh;">
           <h2>🚫 Sorry!</h2>
           <p>This site is not supported in this browser.</p>
           <p>Please open it in <strong>Google Chrome</strong> for the best experience.</p>
+          <br>
+          <a href="${chromeIntent}" style="background:#00f0ff; color:black; padding:12px 20px; border-radius:10px; text-decoration:none; font-weight:bold;">
+            👉 Open in Chrome
+          </a>
         </div>
       `;
     }
