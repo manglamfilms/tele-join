@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/join", "destination": "/join.html" },
+    { "source": "/mix", "destination": "/mix.html" },
+    { "source": "/channel", "destination": "/channel.html" },
+    { "source": "/group", "destination": "/group.html" }
+  ]
+}
