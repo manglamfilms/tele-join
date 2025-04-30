@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telegram Channel Promo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #00f0ff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column; /* Changed to stack the buttons vertically */
+      justify-content: center;
+      margin: 20px 0;
+      text-align: center; /* Center buttons */
+    }
+
+    .tabs button {
+      background: #333;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 5px 0; /* Adjusted margin for vertical stacking */
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .tabs button:hover {
+      background: #00f0ff;
+      color: #000;
+    }
+
+    /* Silver Premium Button Styling */
+    .premiumButton {
+      background: linear-gradient(45deg, #c0c0c0, #808080); /* Silver gradient */
+      border: none;
+      padding: 14px 28px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(128, 128, 128, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .premiumButton:hover {
+      background: linear-gradient(45deg, #808080, #c0c0c0); /* Inverted gradient on hover */
+      box-shadow: 0 6px 15px rgba(128, 128, 128, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .tabContent {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .channel {
+      background-color: #222;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+      box-shadow: 0 0 10px #00f0ff33;
+    }
+
+    .channel img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+    }
+
+    .channel a {
+      color: #00f0ff;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>📢 Telegram Promo</h1>
+  </nav>
+
+  <div class="tabs">
+    <button onclick="openTab('popular')">🌹भाभी वीडियो ज्वाइन करे 🔗</button>
+    <button onclick="openTab('new')">🥰 देसी वीडियो ज्वाइन करे 🌹</button>
+    <button onclick="openTab('premium')">English Video Premium 🔒</button>
+    <button onclick="openTab('exclusive')">वायरल विडियो Premium Unlook🔒</button>
+  </div>
+
+  <!-- Popular Tab -->
+  <div id="popular" class="tabContent">
+    <div class="channel">
+      <img src="Photo/B1.jpg" alt="Channel">
+      <a href="https://t.me/+83JYG4sVXfo0OTZl" target="_blank">भाभी वीडियो Channel 1</a>
+      <button onclick="window.open('https://t.me/+83JYG4sVXfo0OTZl', '_blank')" class="joinNowButton">Join Now</button>
+    </div>
+    <div class="channel">
+      <img src="Photo/2.jpg" alt="Channel">
+      <a href="https://t.me/+2_G1s6AonwU2M2Rl" target="_blank">✨भाभी वीडियो Channel 2</a>
+      <button onclick="window.open('https://t.me/+2_G1s6AonwU2M2Rl', '_blank')" class="joinNowButton">Join Now</button>
+    </div>
+  </div>
+
+  <!-- New Tab -->
+  <div id="new" class="tabContent" style="display:none;">
+    <div class="channel">
+      <img src="Photo/3.jpg" alt="Channel">
+      <a href="https://t.me/+ZbVVXlCM9_xiZDI1" target="_blank">🥰 देसी वीडियो 1</a>
+      <button onclick="window.open('https://t.me/+ZbVVXlCM9_xiZDI1', '_blank')" class="joinNowButton">Join Now</button>
+    </div>
+    <div class="channel">
+      <img src="Photo/4.jpg" alt="Channel">
+      <a href="https://t.me/+rPTYsOHjGww0OTA1" target="_blank">🥰 देसी वीडियो 2</a>
+      <button onclick="window.open('https://t.me/+rPTYsOHjGww0OTA1', '_blank')" class="joinNowButton">Join Now</button>
+    </div>
+  </div>
+
+  <!-- Premium Tab -->
+  <div id="premium" class="tabContent" style="display:none;">
+    <div class="lockOverlay" id="premiumLock">
+      <p>🔐 Premium Channels Locked</p>
+      <button onclick="shareToUnlock('premium')" class="premiumButton">अपने 5 दोस्तों को लिंक भेजें खुल जाएगा🔗 Share to Unlock</button>
+    </div>
+    <div id="premiumChannels" style="display: none;">
+      <div class="channel">
+        <img src="Photo/5.jpg" alt="Channel">
+        <a href="https://t.me/+HwNGpDLT6bsxZjc1" target="_blank">💎English Video Premium 1</a>
+        <button onclick="window.open('https://t.me/+HwNGpDLT6bsxZjc1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+      <div class="channel">
+        <img src="Photo/6.jpg" alt="Channel">
+        <a href="https://t.me/+gw0gSz7CVLZiOTY1" target="_blank">💎 English Video Premium 2</a>
+        <button onclick="window.open('https://t.me/+gw0gSz7CVLZiOTY1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exclusive Tab -->
+  <div id="exclusive" class="tabContent" style="display:none;">
+    <div class="lockOverlay" id="exclusiveLock">
+      <p>🔐 Exclusive Channels Locked</p>
+      <button onclick="shareToUnlock('exclusive')" class="premiumButton">🔗अपने 5 दोस्तों को लिंक भेजें खुल जाएगा Share to Unlock</button>
+    </div>
+    <div id="exclusiveChannels" style="display: none;">
+      <div class="channel">
+        <img src="Photo/7.jpg" alt="Channel">
+        <a href="https://t.me/+wbotrWdcdEYxY2M1" target="_blank">🚀 Exclusive Channel 1</a>
+        <button onclick="window.open('https://t.me/+wbotrWdcdEYxY2M1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+      <div class="channel">
+        <img src="Photo/8.jpg" alt="Channel">
+        <a href="https://t.me/+MF2D6Et9KJ8yNmI1" target="_blank">🚀 Exclusive Channel 2</a>
+        <button onclick="window.open('https://t.me/+MF2D6Et9KJ8yNmI1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openTab(tabId) {
+      let tabs = document.getElementsByClassName('tabContent');
+      for (let tab of tabs) {
+        tab.style.display = 'none';
+      }
+      document.getElementById(tabId).style.display = 'block';
+    }
+
+    // Premium unlock logic
+    function shareToUnlock(tab) {
+      if (navigator.share) {
+        navigator.share({
+          title: "Unlock Telegram Channels",
+          text: "Check out this awesome Telegram channel promotion site!",
+          url: window.location.href
+        })
+        .then(() => {
+          unlock(tab);
+        })
+        .catch((error) => {
+          alert("Share failed or canceled.");
+          console.error(error);
+        });
+      } else {
+        alert("Sharing not supported. Use a modern mobile browser.");
+      }
+    }
+
+    function unlock(tab) {
+      if (tab === 'premium') {
+        document.getElementById('premiumLock').style.display = 'none';
+        document.getElementById('premiumChannels').style.display = 'block';
+      } else if (tab === 'exclusive') {
+        document.getElementById('exclusiveLock').style.display = 'none';
+        document.getElementById('exclusiveChannels').style.display = 'block';
+      }
+    }
+
+    // Load default tab
+    window.onload = function () {
+      openTab('popular');
+    };
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6CXNY0XX6R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6CXNY0XX6R');
+</script>
+
+<script>
+    window.onload = function () {
+      const ua = navigator.userAgent.toLowerCase();
+  
+      // Detect Instagram, Facebook, or Telegram browsers
+      if (ua.includes("instagram") || ua.includes("fbav") || ua.includes("telegram")) {
+        const currentUrl = window.location.href;
+        const chromeIntent = "intent://" + currentUrl.replace(/^https?:\/\//, '') + "#Intent;scheme=https;package=com.android.chrome;end";
+  
+        document.body.innerHTML = `
+          <div style="text-align:center; padding:50px; color:white; background-color:black; height:100vh;">
+            <h2>Open Chrome Sorry!</h2>
+            <p>This site is not supported in this browser.</p>
+            <p>Please open it in <strong>Google Chrome</strong> for the best experience.</p>
+            <br>
+            <a href="${chromeIntent}" style="background:#00f0ff; color:black; padding:14px 24px; font-size:18px; border-radius:12px; text-decoration:none; font-weight:bold;">
+              👉 Open in Chrome
+            </a>
+          </div>
+        `;
+      }
+    };
+  </script>
+
+
+
+  <footer>
+    <p>&copy; 2025 Telegram Channel Promo. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
