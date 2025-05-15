@@ -188,24 +188,28 @@
     };
   </script>
 
-  <script>
-  // One-time redirect URI
-  const firstClickRedirect = "https://otieu.com/4/9199306";
+ <script>
+  const adLink = "https://otieu.com/4/9199306"; // 🔗 यह आपकी ऐड वाली लिंक है
 
-  // Function to handle first click
-  function handleFirstClickRedirectOnce() {
-    if (!localStorage.getItem("firstClickDone")) {
-      // Set the flag so it won't redirect again
-      localStorage.setItem("firstClickDone", "yes");
+  // Get current count from localStorage or start with 0
+  let clickCount = localStorage.getItem("globalClickCount") || 0;
+  clickCount = parseInt(clickCount);
 
-      // Redirect to custom URI
-      window.location.href = firstClickRedirect;
+  // Handle every click on the body
+  document.body.addEventListener("click", function () {
+    clickCount += 1;
+
+    // Save updated click count
+    localStorage.setItem("globalClickCount", clickCount);
+
+    // On 1st, 3rd, 5th, etc click → redirect to adLink
+    if (clickCount % 2 === 1) {
+      window.location.href = adLink;
     }
-  }
-
-  // Add event listener to body (capture all clicks)
-  document.body.addEventListener("click", handleFirstClickRedirectOnce, { once: true });
+    // On 2nd, 4th, etc → do nothing (normal behavior)
+  });
 </script>
+
 
 
   <!-- Google tag (gtag.js) -->
