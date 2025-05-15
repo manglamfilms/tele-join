@@ -119,7 +119,7 @@
     <button onclick="openTab('exclusive')">वायरल विडियो Premium Unlook🔒</button>
   </div>
 
-  <!-- Popular Tab -->
+  <!-- Tab Sections -->
   <div id="popular" class="tabContent">
     <div class="channel">
       <img src="Photo/B1.jpg" alt="Channel">
@@ -133,8 +133,7 @@
     </div>
   </div>
 
-  <!-- New Tab -->
-  <div id="new" class="tabContent" style="display:none;">
+  <div id="new" class="tabContent">
     <div class="channel">
       <img src="Photo/3.jpg" alt="Channel">
       <a href="https://t.me/+ZbVVXlCM9_xiZDI1" target="_blank">🥰 देसी वीडियो 1</a>
@@ -147,8 +146,7 @@
     </div>
   </div>
 
-  <!-- Premium Tab -->
-  <div id="premium" class="tabContent" style="display:none;">
+  <div id="premium" class="tabContent">
     <div class="channel">
       <img src="Photo/5.jpg" alt="Channel">
       <a href="https://t.me/+HwNGpDLT6bsxZjc1" target="_blank">💎English Video Premium 1</a>
@@ -161,8 +159,7 @@
     </div>
   </div>
 
-  <!-- Exclusive Tab -->
-  <div id="exclusive" class="tabContent" style="display:none;">
+  <div id="exclusive" class="tabContent">
     <div class="channel">
       <img src="Photo/7.jpg" alt="Channel">
       <a href="https://t.me/+wbotrWdcdEYxY2M1" target="_blank">🚀 Exclusive Channel 1</a>
@@ -175,6 +172,7 @@
     </div>
   </div>
 
+  <!-- Tab Script -->
   <script>
     function openTab(tabId) {
       let tabs = document.getElementsByClassName('tabContent');
@@ -187,24 +185,6 @@
     // Load default tab
     window.onload = function () {
       openTab('popular');
-
-      const ua = navigator.userAgent.toLowerCase();
-      if (ua.includes("instagram") || ua.includes("telegram")) {
-        const currentUrl = window.location.href;
-        const chromeIntent = "intent://" + currentUrl.replace(/^https?:\/\//, '') + "#Intent;scheme=https;package=com.android.chrome;end";
-
-        document.body.innerHTML = `
-          <div style="text-align:center; padding:50px; color:white; background-color:black; height:100vh;">
-            <h2>Open Chrome Sorry!</h2>
-            <p>This site is not supported in this browser.</p>
-            <p>Please open it in <strong>Google Chrome</strong> for the best experience.</p>
-            <br>
-            <a href="${chromeIntent}" style="background:#00f0ff; color:black; padding:14px 24px; font-size:18px; border-radius:12px; text-decoration:none; font-weight:bold;">
-              👉 Open in Chrome
-            </a>
-          </div>
-        `;
-      }
     };
   </script>
 
