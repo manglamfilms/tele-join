@@ -178,20 +178,21 @@
   <div id="fallback">
     <h2>⚠️ Open in Chrome</h2>
     <p>This site is not supported inside Instagram or Facebook app.</p>
-    <p>Please tap <b>three dots ⋮</b> at the top and select <b>"Open in Chrome"</b></p>
+    <p>Please tap <b>three dots ⋮</b> and select <b>"Open in Chrome"</b></p>
     <button class="openChromeBtn" onclick="openInChrome()">🚀 Open in Chrome</button>
   </div>
 
   <!-- SCRIPT -->
   <script>
     function openInChrome() {
-      const currentURL = window.location.href;
-      const chromeURL = "googlechrome://navigate?url=" + currentURL;
-      window.location.href = chromeURL;
+      const url = "https://telejoinviral.web.app"; // ← अपना domain डालें
+      const chromeIntent = "intent://" + url.replace("https://", "") + "#Intent;scheme=https;package=com.android.chrome;end";
+
+      window.location.href = chromeIntent;
 
       setTimeout(() => {
-        alert("If it didn’t open, tap ⋮ and choose 'Open in Chrome'.");
-      }, 1000);
+        alert("If Chrome didn’t open, tap ⋮ and choose 'Open in browser'.");
+      }, 1500);
     }
 
     window.onload = function () {
@@ -199,12 +200,8 @@
       const isInApp = ua.includes("Instagram") || ua.includes("FBAV") || ua.includes("FBAN");
 
       if (isInApp) {
-        // Hide main content and show fallback only
         document.getElementById("mainContent").style.display = "none";
         document.getElementById("fallback").style.display = "flex";
-
-        // Try auto redirect
-        window.location.href = "googlechrome://navigate?url=" + window.location.href;
       }
     };
   </script>
