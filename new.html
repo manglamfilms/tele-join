@@ -22,35 +22,14 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     }
 
-    .tabs {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 20px 0;
-      text-align: center;
-    }
-
-    .tabs button {
-      background: #333;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      margin: 5px 0;
-      cursor: pointer;
-      border-radius: 10px;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    .tabs button:hover {
-      background: #00f0ff;
-      color: #000;
-    }
-
-    .tabContent {
-      display: none;
+    .channel-section {
       padding: 20px;
       text-align: center;
+    }
+
+    .channel-section h2 {
+      margin-bottom: 10px;
+      color: #00f0ff;
     }
 
     .channel {
@@ -112,77 +91,68 @@
     <h1>📢 Telegram Promo</h1>
   </nav>
 
-  <div class="tabs">
-    <button onclick="openTab('popular')">🌹भाभी वीडियो ज्वाइन करे 🔗</button>
-    <button onclick="openTab('new')">🥰 देसी वीडियो ज्वाइन करे 🌹</button>
-    <button onclick="openTab('premium')">English Video Premium 🔒</button>
-    <button onclick="openTab('exclusive')">वायरल विडियो Premium Unlook🔒</button>
+  <div id="allChannels">
+
+    <div class="channel-section">
+      <h2>🌹 भाभी वीडियो</h2>
+      <div class="channel">
+        <img src="Photo/B1.jpg" alt="Channel">
+        <a href="https://t.me/+83JYG4sVXfo0OTZl" target="_blank">भाभी वीडियो Channel 1</a>
+        <button onclick="window.open('https://t.me/+83JYG4sVXfo0OTZl', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+      <div class="channel">
+        <img src="Photo/2.jpg" alt="Channel">
+        <a href="https://t.me/+2_G1s6AonwU2M2Rl" target="_blank">✨भाभी वीडियो Channel 2</a>
+        <button onclick="window.open('https://t.me/+2_G1s6AonwU2M2Rl', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+    </div>
+
+    <div class="channel-section">
+      <h2>🥰 देसी वीडियो</h2>
+      <div class="channel">
+        <img src="Photo/3.jpg" alt="Channel">
+        <a href="https://t.me/+ZbVVXlCM9_xiZDI1" target="_blank">🥰 देसी वीडियो 1</a>
+        <button onclick="window.open('https://t.me/+ZbVVXlCM9_xiZDI1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+      <div class="channel">
+        <img src="Photo/4.jpg" alt="Channel">
+        <a href="https://t.me/+rPTYsOHjGww0OTA1" target="_blank">🥰 देसी वीडियो 2</a>
+        <button onclick="window.open('https://t.me/+rPTYsOHjGww0OTA1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+    </div>
+
+    <div class="channel-section">
+      <h2>💎 English Premium</h2>
+      <div class="channel">
+        <img src="Photo/5.jpg" alt="Channel">
+        <a href="https://t.me/+HwNGpDLT6bsxZjc1" target="_blank">💎 English Premium 1</a>
+        <button onclick="window.open('https://t.me/+HwNGpDLT6bsxZjc1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+      <div class="channel">
+        <img src="Photo/6.jpg" alt="Channel">
+        <a href="https://t.me/+gw0gSz7CVLZiOTY1" target="_blank">💎 English Premium 2</a>
+        <button onclick="window.open('https://t.me/+gw0gSz7CVLZiOTY1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+    </div>
+
+    <div class="channel-section">
+      <h2>🚀 Exclusive Premium</h2>
+      <div class="channel">
+        <img src="Photo/7.jpg" alt="Channel">
+        <a href="https://t.me/+wbotrWdcdEYxY2M1" target="_blank">🚀 Exclusive 1</a>
+        <button onclick="window.open('https://t.me/+wbotrWdcdEYxY2M1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+      <div class="channel">
+        <img src="Photo/8.jpg" alt="Channel">
+        <a href="https://t.me/+MF2D6Et9KJ8yNmI1" target="_blank">🚀 Exclusive 2</a>
+        <button onclick="window.open('https://t.me/+MF2D6Et9KJ8yNmI1', '_blank')" class="joinNowButton">Join Now</button>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Tab Sections -->
-  <div id="popular" class="tabContent">
-    <div class="channel">
-      <img src="Photo/B1.jpg" alt="Channel">
-      <a href="https://t.me/+83JYG4sVXfo0OTZl" target="_blank">भाभी वीडियो Channel 1</a>
-      <button onclick="window.open('https://t.me/+83JYG4sVXfo0OTZl', '_blank')" class="joinNowButton">Join Now</button>
-    </div>
-    <div class="channel">
-      <img src="Photo/2.jpg" alt="Channel">
-      <a href="https://t.me/+2_G1s6AonwU2M2Rl" target="_blank">✨भाभी वीडियो Channel 2</a>
-      <button onclick="window.open('https://t.me/+2_G1s6AonwU2M2Rl', '_blank')" class="joinNowButton">Join Now</button>
-    </div>
-  </div>
-
-  <div id="new" class="tabContent">
-    <div class="channel">
-      <img src="Photo/3.jpg" alt="Channel">
-      <a href="https://t.me/+ZbVVXlCM9_xiZDI1" target="_blank">🥰 देसी वीडियो 1</a>
-      <button onclick="window.open('https://t.me/+ZbVVXlCM9_xiZDI1', '_blank')" class="joinNowButton">Join Now</button>
-    </div>
-    <div class="channel">
-      <img src="Photo/4.jpg" alt="Channel">
-      <a href="https://t.me/+rPTYsOHjGww0OTA1" target="_blank">🥰 देसी वीडियो 2</a>
-      <button onclick="window.open('https://t.me/+rPTYsOHjGww0OTA1', '_blank')" class="joinNowButton">Join Now</button>
-    </div>
-  </div>
-
-  <div id="premium" class="tabContent">
-    <div class="channel">
-      <img src="Photo/5.jpg" alt="Channel">
-      <a href="https://t.me/+HwNGpDLT6bsxZjc1" target="_blank">💎English Video Premium 1</a>
-      <button onclick="window.open('https://t.me/+HwNGpDLT6bsxZjc1', '_blank')" class="joinNowButton">Join Now</button>
-    </div>
-    <div class="channel">
-      <img src="Photo/6.jpg" alt="Channel">
-      <a href="https://t.me/+gw0gSz7CVLZiOTY1" target="_blank">💎 English Video Premium 2</a>
-      <button onclick="window.open('https://t.me/+gw0gSz7CVLZiOTY1', '_blank')" class="joinNowButton">Join Now</button>
-    </div>
-  </div>
-
-  <div id="exclusive" class="tabContent">
-    <div class="channel">
-      <img src="Photo/7.jpg" alt="Channel">
-      <a href="https://t.me/+wbotrWdcdEYxY2M1" target="_blank">🚀 Exclusive Channel 1</a>
-      <button onclick="window.open('https://t.me/+wbotrWdcdEYxY2M1', '_blank')" class="joinNowButton">Join Now</button>
-    </div>
-    <div class="channel">
-      <img src="Photo/8.jpg" alt="Channel">
-      <a href="https://t.me/+MF2D6Et9KJ8yNmI1" target="_blank">🚀 Exclusive Channel 2</a>
-      <button onclick="window.open('https://t.me/+MF2D6Et9KJ8yNmI1', '_blank')" class="joinNowButton">Join Now</button>
-    </div>
-  </div>
-
-  <!-- Tab Script -->
+  <!-- Instagram/Facebook block script -->
   <script>
-    function openTab(tabId) {
-      let tabs = document.getElementsByClassName('tabContent');
-      for (let tab of tabs) {
-        tab.style.display = 'none';
-      }
-      document.getElementById(tabId).style.display = 'block';
-    }
-
-    // Detect in-app browsers (Instagram, Facebook)
     window.onload = function () {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const isInstagram = userAgent.includes("Instagram");
@@ -198,8 +168,6 @@
             </div>
           </div>
         `;
-      } else {
-        openTab('popular');
       }
     };
   </script>
