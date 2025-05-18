@@ -95,29 +95,32 @@
       flex-direction: column;
     }
 
-    .copyBtn {
+    .openChromeBtn {
       background: #00f0ff;
       color: #000;
-      padding: 10px 20px;
-      margin-top: 15px;
+      padding: 12px 24px;
+      margin-top: 20px;
       border: none;
-      border-radius: 10px;
+      border-radius: 30px;
       cursor: pointer;
       font-size: 16px;
+      box-shadow: 0 0 15px #00f0ff55;
+      transition: 0.3s;
     }
 
-    .copyBtn:hover {
+    .openChromeBtn:hover {
       background: #00c0cc;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <h1>📢 Telegram Promo</h1>
-  </nav>
-
+  <!-- MAIN CONTENT -->
   <div id="mainContent">
+    <nav>
+      <h1>📢 Telegram Promo</h1>
+    </nav>
+
     <h2>🌹 भाभी वीडियो ज्वाइन करे 🔗</h2>
     <div class="channel">
       <img src="Photo/B1.jpg" alt="Channel 1">
@@ -165,21 +168,21 @@
       <a href="https://t.me/+ZdTCi8lfm0hjYWI1" target="_blank">🚀 Exclusive Channel 2</a>
       <a class="joinNowButton" href="https://t.me/+ZdTCi8lfm0hjYWI1" target="_blank">Join Now</a>
     </div>
+
+    <footer>
+      <p>&copy; 2025 Telegram Channel Promo. All Rights Reserved.</p>
+    </footer>
   </div>
 
+  <!-- FALLBACK FOR FB / IG BROWSERS -->
   <div id="fallback">
-    <div>
-      <h2>⚠️ Open in Chrome</h2>
-      <p>This site is not supported in Instagram or Facebook app.</p>
-      <p>Please tap <b>three dots ⋮</b> at the top and choose <b>"Open in Chrome"</b></p>
-      <button class="copyBtn" onclick="openInChrome()">🚀 Open in Chrome</button>
-    </div>
+    <h2>⚠️ Open in Chrome</h2>
+    <p>This site is not supported inside Instagram or Facebook app.</p>
+    <p>Please tap <b>three dots ⋮</b> at the top and select <b>"Open in Chrome"</b></p>
+    <button class="openChromeBtn" onclick="openInChrome()">🚀 Open in Chrome</button>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Telegram Channel Promo. All Rights Reserved.</p>
-  </footer>
-
+  <!-- SCRIPT -->
   <script>
     function openInChrome() {
       const currentURL = window.location.href;
@@ -187,7 +190,7 @@
       window.location.href = chromeURL;
 
       setTimeout(() => {
-        alert("If it didn’t open automatically, please use your browser’s 'Open in Chrome' option.");
+        alert("If it didn’t open, tap ⋮ and choose 'Open in Chrome'.");
       }, 1000);
     }
 
@@ -196,12 +199,12 @@
       const isInApp = ua.includes("Instagram") || ua.includes("FBAV") || ua.includes("FBAN");
 
       if (isInApp) {
-        window.location.href = "googlechrome://navigate?url=" + window.location.href;
+        // Hide main content and show fallback only
+        document.getElementById("mainContent").style.display = "none";
+        document.getElementById("fallback").style.display = "flex";
 
-        setTimeout(() => {
-          document.getElementById("mainContent").style.display = "none";
-          document.getElementById("fallback").style.display = "flex";
-        }, 2000);
+        // Try auto redirect
+        window.location.href = "googlechrome://navigate?url=" + window.location.href;
       }
     };
   </script>
