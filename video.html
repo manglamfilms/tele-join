@@ -81,35 +81,6 @@
       width: 100%;
       box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
     }
-
-    #fallback {
-      display: none;
-      background: #111;
-      color: #fff;
-      height: 100vh;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      flex-direction: column;
-    }
-
-    .openChromeBtn {
-      background: #00f0ff;
-      color: #000;
-      padding: 12px 24px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 16px;
-      box-shadow: 0 0 15px #00f0ff55;
-      transition: 0.3s;
-    }
-
-    .openChromeBtn:hover {
-      background: #00c0cc;
-    }
   </style>
 </head>
 <body>
@@ -172,34 +143,21 @@
     </footer>
   </div>
 
-  <div id="fallback">
-    <h2>⚠️ Open in Chrome</h2>
-    <p>This site is not supported inside Instagram or Facebook app.</p>
-    <p>Please tap <b>three dots ⋮</b> and select <b>"Open in Chrome"</b></p>
-    <button class="openChromeBtn" onclick="openInChrome()">🚀 Open in Chrome</button>
-  </div>
-
- <script>
-    function openTab(tabId) {
-      let tabs = document.getElementsByClassName('tabContent');
-      for (let tab of tabs) {
-        tab.style.display = 'none';
-      }
-      document.getElementById(tabId).style.display = 'block';
-    }
-
-    // Load default tab
+  <script>
     window.onload = function () {
-      openTab('popular');
-
       const ua = navigator.userAgent.toLowerCase();
-      if (ua.includes("instagram") || ua.includes("FBAN")) {
+      if (
+        ua.includes("instagram") ||
+        ua.includes("fbav") ||
+        ua.includes("fban") ||
+        ua.includes("fb_iab") ||
+        ua.includes("fbios")
+      ) {
         const currentUrl = window.location.href;
         const chromeIntent = "intent://" + currentUrl.replace(/^https?:\/\//, '') + "#Intent;scheme=https;package=com.android.chrome;end";
-
-        document.body.innerHTML = 
+        document.body.innerHTML = `
           <div style="text-align:center; padding:50px; color:white; background-color:black; height:100vh;">
-            <h2>Open Chrome Sorry!</h2>
+            <h2>⚠️ Open in Chrome</h2>
             <p>This site is not supported in this browser.</p>
             <p>Please open it in <strong>Google Chrome</strong> for the best experience.</p>
             <br>
@@ -207,7 +165,7 @@
               👉 Open in Chrome
             </a>
           </div>
-        ;
+        `;
       }
     };
   </script>
