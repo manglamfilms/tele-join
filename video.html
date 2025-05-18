@@ -81,6 +81,34 @@
       width: 100%;
       box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
     }
+
+    #fallback {
+      display: none;
+      background: #111;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      flex-direction: column;
+    }
+
+    .copyBtn {
+      background: #00f0ff;
+      color: #000;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .copyBtn:hover {
+      background: #00c0cc;
+    }
   </style>
 </head>
 <body>
@@ -89,72 +117,89 @@
     <h1>📢 Telegram Promo</h1>
   </nav>
 
-  <h2>🌹 भाभी वीडियो ज्वाइन करे 🔗</h2>
-  <div class="channel">
-    <img src="Photo/B1.jpg" alt="Channel 1">
-    <a href="https://t.me/+JQe2gP3egUZiZjJl" target="_blank">भाभी वीडियो Channel 1</a>
-    <a class="joinNowButton" href="https://t.me/+JQe2gP3egUZiZjJl" target="_blank">Join Now</a>
-  </div>
-  <div class="channel">
-    <img src="Photo/2.jpg" alt="Channel 2">
-    <a href="https://t.me/+W5ZRRFK2pxU2M2Y1" target="_blank">✨ भाभी वीडियो Channel 2</a>
-    <a class="joinNowButton" href="https://t.me/+W5ZRRFK2pxU2M2Y1" target="_blank">Join Now</a>
+  <div id="mainContent">
+    <h2>🌹 भाभी वीडियो ज्वाइन करे 🔗</h2>
+    <div class="channel">
+      <img src="Photo/B1.jpg" alt="Channel 1">
+      <a href="https://t.me/+JQe2gP3egUZiZjJl" target="_blank">भाभी वीडियो Channel 1</a>
+      <a class="joinNowButton" href="https://t.me/+JQe2gP3egUZiZjJl" target="_blank">Join Now</a>
+    </div>
+    <div class="channel">
+      <img src="Photo/2.jpg" alt="Channel 2">
+      <a href="https://t.me/+W5ZRRFK2pxU2M2Y1" target="_blank">✨ भाभी वीडियो Channel 2</a>
+      <a class="joinNowButton" href="https://t.me/+W5ZRRFK2pxU2M2Y1" target="_blank">Join Now</a>
+    </div>
+
+    <h2>🥰 देसी वीडियो ज्वाइन करे 🌹</h2>
+    <div class="channel">
+      <img src="Photo/3.jpg" alt="Channel 3">
+      <a href="https://t.me/+40iLskJil0g1NmJl" target="_blank">🥰 देसी वीडियो 1</a>
+      <a class="joinNowButton" href="https://t.me/+40iLskJil0g1NmJl" target="_blank">Join Now</a>
+    </div>
+    <div class="channel">
+      <img src="Photo/4.jpg" alt="Channel 4">
+      <a href="https://t.me/+5EemyEsrmn9hMDY1" target="_blank">🥰 देसी वीडियो 2</a>
+      <a class="joinNowButton" href="https://t.me/+5EemyEsrmn9hMDY1" target="_blank">Join Now</a>
+    </div>
+
+    <h2>💎 English Video Premium 🔒</h2>
+    <div class="channel">
+      <img src="Photo/5.jpg" alt="Channel 5">
+      <a href="https://t.me/+a3MkDfJVSkEzYzNl" target="_blank">💎 English Video Premium 1</a>
+      <a class="joinNowButton" href="https://t.me/+a3MkDfJVSkEzYzNl" target="_blank">Join Now</a>
+    </div>
+    <div class="channel">
+      <img src="Photo/6.jpg" alt="Channel 6">
+      <a href="https://t.me/+BpgWiQOsKQ45Mzk1" target="_blank">💎 English Video Premium 2</a>
+      <a class="joinNowButton" href="https://t.me/+BpgWiQOsKQ45Mzk1" target="_blank">Join Now</a>
+    </div>
+
+    <h2>🚀 वायरल विडियो Premium Unlook 🔒</h2>
+    <div class="channel">
+      <img src="Photo/7.jpg" alt="Channel 7">
+      <a href="https://t.me/+BuvoEJ70nfs0YjI1" target="_blank">🚀 Exclusive Channel 1</a>
+      <a class="joinNowButton" href="https://t.me/+BuvoEJ70nfs0YjI1" target="_blank">Join Now</a>
+    </div>
+    <div class="channel">
+      <img src="Photo/8.jpg" alt="Channel 8">
+      <a href="https://t.me/+ZdTCi8lfm0hjYWI1" target="_blank">🚀 Exclusive Channel 2</a>
+      <a class="joinNowButton" href="https://t.me/+ZdTCi8lfm0hjYWI1" target="_blank">Join Now</a>
+    </div>
   </div>
 
-  <h2>🥰 देसी वीडियो ज्वाइन करे 🌹</h2>
-  <div class="channel">
-    <img src="Photo/3.jpg" alt="Channel 3">
-    <a href="https://t.me/+40iLskJil0g1NmJl" target="_blank">🥰 देसी वीडियो 1</a>
-    <a class="joinNowButton" href="https://t.me/+40iLskJil0g1NmJl" target="_blank">Join Now</a>
-  </div>
-  <div class="channel">
-    <img src="Photo/4.jpg" alt="Channel 4">
-    <a href="https://t.me/+5EemyEsrmn9hMDY1" target="_blank">🥰 देसी वीडियो 2</a>
-    <a class="joinNowButton" href="https://t.me/+5EemyEsrmn9hMDY1" target="_blank">Join Now</a>
-  </div>
-
-  <h2>💎 English Video Premium 🔒</h2>
-  <div class="channel">
-    <img src="Photo/5.jpg" alt="Channel 5">
-    <a href="https://t.me/+a3MkDfJVSkEzYzNl" target="_blank">💎 English Video Premium 1</a>
-    <a class="joinNowButton" href="https://t.me/+a3MkDfJVSkEzYzNl" target="_blank">Join Now</a>
-  </div>
-  <div class="channel">
-    <img src="Photo/6.jpg" alt="Channel 6">
-    <a href="https://t.me/+BpgWiQOsKQ45Mzk1" target="_blank">💎 English Video Premium 2</a>
-    <a class="joinNowButton" href="https://t.me/+BpgWiQOsKQ45Mzk1" target="_blank">Join Now</a>
-  </div>
-
-  <h2>🚀 वायरल विडियो Premium Unlook 🔒</h2>
-  <div class="channel">
-    <img src="Photo/7.jpg" alt="Channel 7">
-    <a href="https://t.me/+BuvoEJ70nfs0YjI1" target="_blank">🚀 Exclusive Channel 1</a>
-    <a class="joinNowButton" href="https://t.me/+BuvoEJ70nfs0YjI1" target="_blank">Join Now</a>
-  </div>
-  <div class="channel">
-    <img src="Photo/8.jpg" alt="Channel 8">
-    <a href="https://t.me/+ZdTCi8lfm0hjYWI1" target="_blank">🚀 Exclusive Channel 2</a>
-    <a class="joinNowButton" href="https://t.me/+ZdTCi8lfm0hjYWI1" target="_blank">Join Now</a>
+  <div id="fallback">
+    <div>
+      <h2>⚠️ Open in Chrome</h2>
+      <p>This site is not supported in Instagram or Facebook app.</p>
+      <p>Please tap <b>three dots ⋮</b> at the top and choose <b>"Open in Chrome"</b></p>
+      <button class="copyBtn" onclick="copyLink()">📋 Copy Link</button>
+    </div>
   </div>
 
   <footer>
     <p>&copy; 2025 Telegram Channel Promo. All Rights Reserved.</p>
   </footer>
 
-  <!-- Block Instagram/Facebook Browser -->
+  <!-- Auto Redirect & Fallback -->
   <script>
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href);
+      alert("Link copied! Please open it in Chrome.");
+    }
+
     window.onload = function () {
       const ua = navigator.userAgent || navigator.vendor || window.opera;
-      if (ua.includes("Instagram") || ua.includes("FBAV") || ua.includes("FBAN")) {
-        document.body.innerHTML = `
-          <div style="background:#111; color:#fff; font-family:sans-serif; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px;">
-            <div>
-              <h2>⚠️ Open in Chrome</h2>
-              <p>This site is not supported in Instagram or Facebook app.</p>
-              <p>Please open the link in Chrome or your phone's default browser.</p>
-            </div>
-          </div>
-        `;
+      const isInApp = ua.includes("Instagram") || ua.includes("FBAV") || ua.includes("FBAN");
+
+      if (isInApp) {
+        // Try redirect
+        window.location = "googlechrome://navigate?url=" + window.location.href;
+
+        // Fallback after 2 sec
+        setTimeout(() => {
+          document.getElementById("mainContent").style.display = "none";
+          document.getElementById("fallback").style.display = "flex";
+        }, 2000);
       }
     };
   </script>
