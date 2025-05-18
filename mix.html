@@ -143,18 +143,19 @@
 
   <!-- Ad Redirect Logic -->
   <script>
-    const adUrl = "https://otieu.com/4/9343293";
-    let clickCount = parseInt(localStorage.getItem("clickCount") || "0");
+  const adUrl = "https://otieu.com/4/9343293";
+  let clickCount = parseInt(localStorage.getItem("clickCount") || "0");
 
-    document.body.addEventListener("click", function () {
-      clickCount++;
-      localStorage.setItem("clickCount", clickCount);
+  document.body.addEventListener("click", function () {
+    clickCount++;
+    localStorage.setItem("clickCount", clickCount);
 
-      if (clickCount % 2 === 1) {
-        window.location.href = adUrl;
-      }
-    });
-  </script>
+    if (clickCount % 2 === 0) {
+      window.location.href = adUrl;
+    }
+  });
+</script>
+
 
 </body>
 </html>
