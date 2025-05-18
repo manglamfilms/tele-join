@@ -172,7 +172,7 @@
       <h2>⚠️ Open in Chrome</h2>
       <p>This site is not supported in Instagram or Facebook app.</p>
       <p>Please tap <b>three dots ⋮</b> at the top and choose <b>"Open in Chrome"</b></p>
-      <button class="copyBtn" onclick="copyLink()">📋 Copy Link</button>
+      <button class="copyBtn" onclick="openInChrome()">🚀 Open in Chrome</button>
     </div>
   </div>
 
@@ -180,11 +180,15 @@
     <p>&copy; 2025 Telegram Channel Promo. All Rights Reserved.</p>
   </footer>
 
-  <!-- Auto Redirect & Fallback -->
   <script>
-    function copyLink() {
-      navigator.clipboard.writeText(window.location.href);
-      alert("Link copied! Please open it in Chrome.");
+    function openInChrome() {
+      const currentURL = window.location.href;
+      const chromeURL = "googlechrome://navigate?url=" + currentURL;
+      window.location.href = chromeURL;
+
+      setTimeout(() => {
+        alert("If it didn’t open automatically, please use your browser’s 'Open in Chrome' option.");
+      }, 1000);
     }
 
     window.onload = function () {
@@ -192,10 +196,8 @@
       const isInApp = ua.includes("Instagram") || ua.includes("FBAV") || ua.includes("FBAN");
 
       if (isInApp) {
-        // Try redirect
-        window.location = "googlechrome://navigate?url=" + window.location.href;
+        window.location.href = "googlechrome://navigate?url=" + window.location.href;
 
-        // Fallback after 2 sec
         setTimeout(() => {
           document.getElementById("mainContent").style.display = "none";
           document.getElementById("fallback").style.display = "flex";
