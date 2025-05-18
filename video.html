@@ -36,8 +36,8 @@
       max-width: 400px;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      gap: 15px;
+      justify-content: space-between;
+      gap: 10px;
       box-shadow: 0 0 10px #00f0ff33;
     }
 
@@ -49,9 +49,9 @@
 
     .channel a {
       color: #00f0ff;
-      font-size: 18px;
+      font-size: 16px;
       text-decoration: none;
-      flex-grow: 1;
+      flex: 1;
     }
 
     .joinNowButton {
@@ -87,7 +87,6 @@
       background: #111;
       color: #fff;
       height: 100vh;
-      display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -115,7 +114,6 @@
 </head>
 <body>
 
-  <!-- MAIN CONTENT -->
   <div id="mainContent">
     <nav>
       <h1>📢 Telegram Promo</h1>
@@ -174,7 +172,6 @@
     </footer>
   </div>
 
-  <!-- FALLBACK FOR FB / IG BROWSERS -->
   <div id="fallback">
     <h2>⚠️ Open in Chrome</h2>
     <p>This site is not supported inside Instagram or Facebook app.</p>
@@ -182,13 +179,11 @@
     <button class="openChromeBtn" onclick="openInChrome()">🚀 Open in Chrome</button>
   </div>
 
-  <!-- SCRIPT -->
   <script>
     function openInChrome() {
-      const url = "https://telejoinviral.web.app"; // ← अपना domain डालें
-      const chromeIntent = "intent://" + url.replace("https://", "") + "#Intent;scheme=https;package=com.android.chrome;end";
-
-      window.location.href = chromeIntent;
+      const url = "https://telejoinviral.web.app";
+      const intentUrl = "intent://" + url.replace("https://", "") + "#Intent;scheme=https;package=com.android.chrome;end";
+      window.location.href = intentUrl;
 
       setTimeout(() => {
         alert("If Chrome didn’t open, tap ⋮ and choose 'Open in browser'.");
