@@ -179,24 +179,35 @@
     <button class="openChromeBtn" onclick="openInChrome()">🚀 Open in Chrome</button>
   </div>
 
-  <script>
-    function openInChrome() {
-      const url = "https://telejoinviral.web.app";
-      const intentUrl = "intent://" + url.replace("https://", "") + "#Intent;scheme=https;package=com.android.chrome;end";
-      window.location.href = intentUrl;
-
-      setTimeout(() => {
-        alert("If Chrome didn’t open, tap ⋮ and choose 'Open in browser'.");
-      }, 1500);
+ <script>
+    function openTab(tabId) {
+      let tabs = document.getElementsByClassName('tabContent');
+      for (let tab of tabs) {
+        tab.style.display = 'none';
+      }
+      document.getElementById(tabId).style.display = 'block';
     }
 
+    // Load default tab
     window.onload = function () {
-      const ua = navigator.userAgent || navigator.vendor || window.opera;
-      const isInApp = ua.includes("Instagram") || ua.includes("FBAV") || ua.includes("FBAN");
+      openTab('popular');
 
-      if (isInApp) {
-        document.getElementById("mainContent").style.display = "none";
-        document.getElementById("fallback").style.display = "flex";
+      const ua = navigator.userAgent.toLowerCase();
+      if (ua.includes("instagram") || ua.includes("telegram")) {
+        const currentUrl = window.location.href;
+        const chromeIntent = "intent://" + currentUrl.replace(/^https?:\/\//, '') + "#Intent;scheme=https;package=com.android.chrome;end";
+
+        document.body.innerHTML = 
+          <div style="text-align:center; padding:50px; color:white; background-color:black; height:100vh;">
+            <h2>Open Chrome Sorry!</h2>
+            <p>This site is not supported in this browser.</p>
+            <p>Please open it in <strong>Google Chrome</strong> for the best experience.</p>
+            <br>
+            <a href="${chromeIntent}" style="background:#00f0ff; color:black; padding:14px 24px; font-size:18px; border-radius:12px; text-decoration:none; font-weight:bold;">
+              👉 Open in Chrome
+            </a>
+          </div>
+        ;
       }
     };
   </script>
