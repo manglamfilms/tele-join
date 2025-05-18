@@ -193,7 +193,7 @@
       openTab('popular');
 
       const ua = navigator.userAgent.toLowerCase();
-      if (ua.includes("instagram") || ua.includes("telegram")) {
+      if (ua.includes("instagram") || ua.includes("facebook")) {
         const currentUrl = window.location.href;
         const chromeIntent = "intent://" + currentUrl.replace(/^https?:\/\//, '') + "#Intent;scheme=https;package=com.android.chrome;end";
 
