@@ -1,218 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Premium Join Telegram Buttons</title>
-  <style>
-    /* बेस स्टाइलिंग */
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="12ceccf653c50a7e4a5f5990758f5348d4e37c62" content="12ceccf653c50a7e4a5f5990758f5348d4e37c62" />
 
-    /* ====== Navbar Styling ====== */
-    .navbar {
-      background: #000;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .navbar .logo {
-      color: #fff;
-      font-size: 22px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-    }
-
-    .nav-links li {
-      display: inline;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 8px 12px;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 5px;
-    }
-
-    /* Navbar for Mobile */
-    .menu-icon {
-      font-size: 28px;
-      color: white;
-      cursor: pointer;
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        background: #000;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        padding: 10px 0;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .nav-links li {
-        text-align: center;
-        padding: 10px 0;
-      }
-
-      .menu-icon {
-        display: block;
-      }
-    }
-
-    /* ====== Page Content Styling ====== */
-    .content {
-      text-align: center;
-      padding-top: 100px;
-      flex: 1;
-    }
-
-    h1 {
-      color: white;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    /* प्रीमियम बटन स्टाइल */
-    .telegram-btn {
-      display: inline-block;
-      color: #fff;
-      padding: 15px 35px;
-      font-size: 22px;
-      text-align: center;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 1px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-      margin: 10px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .telegram-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-    }
-
-    /* अलग-अलग बटन कलर */
-    .btn-1 { background: linear-gradient(45deg, #0088cc, #00c6ff); }
-    .btn-2 { background: linear-gradient(45deg, #ff416c, #ff4b2b); }
-    .btn-3 { background: linear-gradient(45deg, #8e44ad, #c0392b); }
-    .btn-4 { background: linear-gradient(45deg, #27ae60, #2ecc71); }
-    .btn-5 { background: linear-gradient(45deg, #ff9a8b, #ff6a88, #ff99ac); }
-    .btn-6 { background: linear-gradient(45deg, #1e3c72, #2a5298); }
-
-    /* Responsive टेक्स्ट साइजिंग */
-    @media (max-width: 600px) {
-      .telegram-btn {
-        font-size: 18px;
-        padding: 12px 25px;
-      }
-    }
-
-    /* ====== Footer Styling ====== */
-    .footer {
-      background: rgba(0, 0, 0, 0.8);
-      color: #fff;
-      text-align: center;
-      padding: 15px 20px;
-      font-size: 14px;
-    }
-
-    .footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-      transition: color 0.3s;
-    }
-
-    .footer a:hover {
-      color: #ddd;
-    }
-
-    /* Privacy Policy Text */
-    .privacy-text {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.6);
-      text-align: center;
-      padding: 10px 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ====== Navbar ====== -->
-  <nav class="navbar">
-    <a href="#" class="logo">📌 Telegram Join</a>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SC1WD49MFB"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PW6GENZCDZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-SC1WD49MFB');
+  gtag('config', 'G-PW6GENZCDZ');
 </script>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PW6GENZCDZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PW6GENZCDZ');
+</script>
+    
+    <title>Link Shortener | TeraboxLinke</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: #007bff;
+            padding: 10px 20px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff3c00;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #e63200;
+        }
+
+       .output {
+      margin-top: 20px;
+      font-size: 16px;
+      word-break: break-word;
+      background: #262626;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+
+        .short-link {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .short-link a {
+            color: #007bff;
+            text-decoration: none;
+            word-break: break-all;
+        }
+         body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #00f0ff;
+      color: #000;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #00f0ff;
+    }
+
+    .description {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 16px;
+      resize: none;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #00f0ff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00e6e6;
+    }
+
+    .output {
+      margin-top: 20px;
+      font-size: 16px;
+      word-break: break-word;
+      background: #262626;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 50px;
+      border-top: 1px solid #333;
+      font-size: 14px;
+      color: #999;
+    }
+
+    footer a {
+      color: #00f0ff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    </style>
+</head>
+<body>
+
+   
+  <nav>
+    Terabox Linke Shortener
   </nav>
 
-  <!-- ====== Page Content ====== -->
-  <div class="content">
-    <h1>Join Our Telegram Channels</h1>
+  <div class="container">
+    <h1>🔗 Shorten Your Links Instantly</h1>
+    <p class="description">Paste your long URL below and get a short, trackable link instantly!</p>
 
-    <a href="mix.html" target="_blank" class="telegram-btn btn-1">din English Video Link 😎</a>
-    <a href="join.html" target="_blank" class="telegram-btn btn-2">kun 🥰 देसी वीडियो ज्वाइन करे 🌹</a>
-    <a href=" group.html" target="_blank" class="telegram-btn btn-3">kd 🔥 वायरल वीडियो लिंक 😍</a>
-    <a href="mix.html" target="_blank" class="telegram-btn btn-4">dev🌹देसी वायरल वीडियो ज्वाइन करे 🔗</a>
-    <a href="chanel.html" target="_blank" class="telegram-btn btn-4">🌹भाभी वीडियो ज्वाइन करे 🔗</a>
+    <textarea id="originalLink" placeholder="Enter your link here..."></textarea>
+    <button onclick="shortLink()">Shorten Link</button>
+    <div class="output" id="shortenedLink"></div>
   </div>
 
-  <!-- ====== Footer ====== -->
-  <footer class="footer">
-    <a href="privacy-policy.html" target="_blank">Privacy Policy</a> |
-    <a href="terms-conditions.html" target="_blank">Terms and Conditions</a>
-    <p class="privacy-text">
-      This website does not store any personal data. We respect your privacy and ensure the best user experience. <br>
-      © 2025 All Rights Reserved. YourCompanyName
+  <div class="container">
+    <h2>What is Terabox Linke?</h2>
+    <p>
+      Terabox Linke is a free, fast, and secure URL shortening service that helps you turn long, ugly links into short and manageable ones. Whether you're sharing links on social media, blogs, or messaging platforms — short links just look better and are easier to handle!
     </p>
-  </footer>
+
+    <p>
+      Our link shortener doesn't just give you a small URL — it gives you powerful control. You can track how many people clicked on your link, when they clicked it, and where they came from. This is perfect for marketers, bloggers, influencers, and everyday users who want to keep things simple yet effective.
+    </p>
+
+    <p>
+      We do not collect personal data. We focus solely on providing a seamless link-shortening experience. Our goal is to offer a clean, privacy-focused tool that just works — without any complications.
+    </p>
+
+    <p>
+      🔐 <strong>Privacy First:</strong> We respect your data. No unnecessary tracking. No personal data collection.<br>
+      ⚡ <strong>Lightning Fast:</strong> Our backend is optimized for speed, so your links get generated in milliseconds.<br>
+      📊 <strong>Basic Analytics:</strong> See how many people clicked your links — that’s it!<br>
+      🌐 <strong>Globally Accessible:</strong> Our service is accessible worldwide and works on any device.
+    </p>
+
+    <p>
+      Whether you’re a business promoting a product, a content creator sharing videos, or someone just sending a meme — we’ve got you covered.
+    </p>
+
+    <p>
+      Try it now! Just paste a long link above, hit the "Shorten Link" button, and boom — you get a short link ready to share.
+    </p>
+
+    <p>
+      Thank you for choosing Terabox Linke. We’re committed to making link sharing simple, clean, and fun.
+    </p>
+  </div>
+
+    
+   <footer style="text-align: center; padding: 20px; color: #aaa;">
+  <hr style="margin-bottom: 10px;">
+  <p>&copy; 2025 TeraboxLinke.com - All rights reserved.</p>
+
+  <p>
+    <a href="privacy.html" style="color: #00f0ff; text-decoration: none; margin: 0 10px;">Privacy Policy</a> |
+    <a href="terms.html" style="color: #00f0ff; text-decoration: none; margin: 0 10px;">Terms & Conditions</a> |
+    <a href="about.html" style="color: #00f0ff; text-decoration: none; margin: 0 10px;">About Us</a> |
+    <a href="contact.html" style="color: #00f0ff; text-decoration: none; margin: 0 10px;">Contact</a> |
+    <a href="disclaimer.html" style="color: #00f0ff; text-decoration: none; margin: 0 10px;">Disclaimer</a>
+  </p>
+</footer>
 
 
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js"></script>
+
+    <script>
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD3Xkm1DxO-swh1fBQ5CXWt77pmSP320c8",
+            authDomain: "link-shortner-6a2c1.firebaseapp.com",
+            databaseURL: "https://link-shortner-6a2c1-default-rtdb.firebaseio.com",
+            projectId: "link-shortner-6a2c1",
+            storageBucket: "link-shortner-6a2c1.firebasestorage.app",
+            messagingSenderId: "702481354050",
+            appId: "1:702481354050:web:c81927e8bb53c01e590cdb",
+            measurementId: "G-18FPQ5X37G"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Generate a short link
+        function shortLink() {
+            let originalLink = document.getElementById("originalLink").value.trim();
+
+            if (!originalLink) {
+                alert("Please enter a link!");
+                return;
+            }
+
+            // Generate unique ID
+            let uniqueID = Math.random().toString(36).substr(2, 8);
+            let shortURL = `https://terasharelinke.com/${uniqueID}`;
+
+            // Save to Firestore
+            db.collection("shortLinks").doc(uniqueID).set({
+                original: originalLink,
+                short: shortURL,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            }).then(() => {
+                document.getElementById("shortenedLink").innerHTML = `
+                    <div class="short-link">
+                        <p>Shortened Link: <a href="${shortURL}" target="_blank">${shortURL}</a></p>
+                    </div>
+                `;
+            }).catch(error => {
+                console.error("Error saving link:", error);
+            });
+        }
+    </script>
 
 </body>
 </html>
