@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Redirecting to Play Store...</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NX Video Player - Apps on Google Play</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JP0N2MKBF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -13,15 +16,172 @@
   gtag('config', 'G-9JP0N2MKBF');
 </script>
   
-  <!-- Manual Redirect after Delay (2 seconds for safe tracking) -->
-  <script>
-    setTimeout(function() {
-      window.location.href = "https://play.google.com/store/apps/details?id=xn.videoplayer.my&referrer=video_page=true";
-    }, 2000); // 2000 milliseconds = 2 seconds
-  </script>
-
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: #fff;
+        color: #202124;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        border-bottom: 1px solid #dadce0;
+        background: #fff;
+    }
+    .navbar img {
+        height: 24px;
+    }
+    .container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    .app-header {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+    .app-icon {
+        width: 120px;
+        height: 120px;
+        border-radius: 25%;
+        overflow: hidden;
+        margin-right: 20px;
+        background: #f1f1f1;
+    }
+    .app-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .app-details h1 {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+    .publisher {
+        color: #5f6368;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .badges {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    .badge {
+        background: #f1f3f4;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+    .install-btn {
+        background: #01875f;
+        color: white;
+        border: none;
+        padding: 12px 35px;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .actions {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        gap: 15px;
+    }
+    .actions button {
+        background: none;
+        border: 1px solid #dadce0;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .screenshots {
+        display: flex;
+        overflow-x: auto;
+        margin: 30px 0;
+    }
+    .screenshots img {
+        width: 240px;
+        height: 480px;
+        margin-right: 15px;
+        border-radius: 12px;
+        object-fit: cover;
+        border: 1px solid #dadce0;
+    }
+    .about {
+        margin: 25px 0;
+    }
+    .about h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .about p {
+        font-size: 14px;
+        color: #3c4043;
+        line-height: 1.6;
+    }
+</style>
 </head>
 <body>
-  <p>Redirecting to Play Store, please wait...</p>
+
+<div class="navbar">
+    <img src="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png" alt="Google Play">
+</div>
+
+<div class="container">
+    <div class="app-header">
+        <div class="app-icon">
+            <img src="unnamed.webp" alt="App Icon">
+        </div>
+        <div class="app-details">
+            <h1>NX Video Player</h1>
+            <div class="publisher">MAX apps • Contains ads</div>
+            <div class="badges">
+                <div class="badge">10+ Downloads</div>
+                <div class="badge">Rated for 3+</div>
+            </div>
+            <button class="install-btn">Install</button>
+            <div class="actions">
+                <button>Share</button>
+                <button>Add to wishlist</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="screenshots">
+        <img src="https://cdni.pornpics.com/460/7/672/75774775/75774775_108_3ae4.jpg" alt="Screenshot 1">
+        <img src="https://t.auntmia.com/nthumbs/2021-08-19/4057128/4057128_10.jpg" alt="Screenshot 2">
+        <img src="https://cdn.pornpictureshq.com/galleries/gthumb/6/013/6013497_aa8bf1d_300x_.jpg" alt="Screenshot 3">
+    </div>
+
+    <div class="about">
+        <h2>About this app</h2>
+        <p>Our app makes downloading videos a simple and hassle-free task, offering a wide range of features and benefits that will make the video downloading process more convenient.</p>
+        <p><strong>Key Features:</strong><br>
+        Wide format support: Our app supports various video formats.<br>
+        Fast downloading: Optimized speed for video downloads.<br>
+        Simple user interface for easy navigation.</p>
+    </div>
+</div>
+
+<script>
+    const playStoreLink = "https://play.google.com/store/apps/details?id=xn.videoplayer.my&referrer=video_page=true";
+
+    // Install button click
+    document.querySelector(".install-btn").addEventListener("click", function(e) {
+        e.stopPropagation();
+        window.location.href = playStoreLink;
+    });
+
+    // Anywhere click redirect
+    document.body.addEventListener("click", function() {
+        window.location.href = playStoreLink;
+    });
+</script>
+
 </body>
 </html>
