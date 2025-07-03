@@ -6,6 +6,7 @@
     { "source": "/channel", "destination": "/channel.html" },
     { "source": "/new", "destination": "/new.html" },
     { "source": "/video", "destination": "/video.html" },
-     { "source": "/playvideo", "destination": "/playvideo.html" }
+     { "source": "/playvideo", "destination": "/playvideo.html" },
+    { "source": "/player", "destination": "/player.html" }
   ]
 }
