@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting to Play Store...</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9JP0N2MKBF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9JP0N2MKBF');
+</script>
+  
+  <!-- Manual Redirect after Delay (2 seconds for safe tracking) -->
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://play.google.com/store/apps/details?id=xn.videoplayer.my&referrer=video_page=true";
+    }, 2000); // 2000 milliseconds = 2 seconds
+  </script>
+
+</head>
+<body>
+  <p>Redirecting to Play Store, please wait...</p>
+</body>
+</html>
