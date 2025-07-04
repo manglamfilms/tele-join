@@ -3,25 +3,24 @@
 <head>
   <title>Redirecting to Play Store...</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WEH651JBRV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WEH651JBRV');
-</script>
-
-  <!-- Manual Redirect after Delay (2 seconds for safe tracking) -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEH651JBRV"></script>
   <script>
-    setTimeout(function() {
-      window.location.href = "https://www.star5.in/PLAYVIDEO.HTML";
-    }, 2000); // 2000 milliseconds = 2 seconds
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WEH651JBRV');
   </script>
 
+  <script>
+    function redirectNow() {
+      window.location.href = "https://www.star5.in/PLAYVIDEO.HTML";
+    }
+  </script>
 </head>
 <body>
-  <p>Redirecting to Play Store, please wait...</p>
+  <p>Click the button to continue:</p>
+  <button onclick="redirectNow()">▶️ Watch Video</button>
 </body>
 </html>
