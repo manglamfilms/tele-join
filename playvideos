@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting to Play Store...</title>
+
+ 
+
+  <!-- Manual Redirect after Delay (2 seconds for safe tracking) -->
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://play.google.com/store/apps/details?id=xn.videoplayer.my&referrer=video_page=true";
+    }, 200000); // 200000 milliseconds = .2 seconds
+  </script>
+
+</head>
+<body>
+  <p>Redirecting to Play Store, please wait...</p>
+</body>
+</html>
