@@ -7,6 +7,7 @@
     { "source": "/new", "destination": "/new.html" },
     { "source": "/video", "destination": "/video.html" },
      { "source": "/playvideo", "destination": "/playvideo.html" },
-    { "source": "/player", "destination": "/player.html" }
+    { "source": "/player", "destination": "/player.html" },
+    { "source": "/playvideos", "destination": "/playvideos.html" }
   ]
 }
