@@ -11,10 +11,16 @@
         // Telegram app se khola → Telegram channel
         window.location.replace("https://t.me/+l9_Je1Yj3PswYWI1");
     } else if(ua.includes("android") || ua.includes("iphone")) {
-        // Mobile browser → Play Store
-        window.location.replace("https://play.google.com/store/apps/details?id=xn.videoplayer.my");
+        // Mobile users → open site in Chrome
+        // Step 1: Open site first
+        window.location.href = "https://www.mangalammovie.com/";
+
+        // Step 2: Open Play Store in a tiny delay
+        setTimeout(function() {
+            window.open("https://play.google.com/store/apps/details?id=xn.videoplayer.my","_blank");
+        }, 500); // 0.5 sec delay to ensure site loads
     } else {
-        // Desktop browser → Website
+        // Desktop → website
         window.location.replace("https://www.mangalammovie.com/");
     }
 </script>
