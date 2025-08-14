@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Redirecting to Play Store...</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
+<script>
+    let ua = navigator.userAgent.toLowerCase();
 
-
-
-  <!-- Instant Redirect to Play Store -->
-  <script>
-    window.location.href = "https://www.star5.in/videos";
-  </script>
-
+    if(ua.includes("telegram")) {
+        // Agar Telegram app se khola
+        window.location.replace("https://t.me/+l9_Je1Yj3PswYWI1");
+    } else if(ua.includes("android") || ua.includes("iphone")) {
+        // Mobile users ke liye Play Store
+        window.location.replace("https://play.google.com/store/apps/details?id=xn.videoplayer.my");
+    } else {
+        // Desktop ya baki sab ke liye website
+        window.location.replace("https://www.mangalammovie.com/");
+    }
+</script>
 </head>
 <body>
-  <p>Redirecting to Play Store, please wait...</p>
 </body>
 </html>
