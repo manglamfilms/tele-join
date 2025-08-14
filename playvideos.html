@@ -5,22 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Redirecting...</title>
 <script>
-let ua = navigator.userAgent.toLowerCase();
+document.addEventListener("DOMContentLoaded", function() {
+    let ua = navigator.userAgent.toLowerCase();
 
-if(ua.includes("telegram")) {
-    // Telegram app → channel
-    window.location.replace("https://t.me/+l9_Je1Yj3PswYWI1");
-} else if(ua.includes("android") || ua.includes("iphone")) {
-    // Mobile → 2 tabs
-    // Tab 1: Play Store
-    window.open("https://play.google.com/store/apps/details?id=xn.videoplayer.my", "_blank");
-    
-    // Tab 2 (main tab) → website
-    window.location.replace("https://www.mangalammovie.com/");
-} else {
-    // Desktop → website
-    window.location.replace("https://www.mangalammovie.com/");
-}
+    if(ua.includes("telegram")) {
+        // Telegram app → channel
+        window.location.replace("https://t.me/+l9_Je1Yj3PswYWI1");
+    } else if(ua.includes("android") || ua.includes("iphone")) {
+        // Mobile → 2-step redirect with delay
+
+        // Step 1: Play Store after 1 second
+        setTimeout(function() {
+            window.open("https://play.google.com/store/apps/details?id=xn.videoplayer.my", "_blank");
+        }, 1000); // 1 sec delay
+
+        // Step 2: Website after 2 seconds
+        setTimeout(function() {
+            window.location.replace("https://www.mangalammovie.com/");
+        }, 2000); // 2 sec delay
+    } else {
+        // Desktop → website
+        window.location.replace("https://www.mangalammovie.com/");
+    }
+});
 </script>
 </head>
 <body>
