@@ -3,33 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecting...</title>
+<title>NX Video Player Redirect</title>
+<style>
+body { display:flex; justify-content:center; align-items:center; height:100vh; background:#111; color:#fff; font-family:Arial; }
+button { padding:15px 30px; font-size:18px; background:#ff5722; border:none; border-radius:10px; color:#fff; cursor:pointer; }
+button:hover { background:#e64a19; }
+</style>
+</head>
+<body>
+
+<button id="openLinks">Open NX Video Player</button>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.getElementById("openLinks").addEventListener("click", function() {
     let ua = navigator.userAgent.toLowerCase();
 
     if(ua.includes("telegram")) {
-        // Telegram app → channel
         window.location.replace("https://t.me/+l9_Je1Yj3PswYWI1");
     } else if(ua.includes("android") || ua.includes("iphone")) {
-        // Mobile → 2-step redirect with delay
-
-        // Step 1: Play Store after 1 second
-        setTimeout(function() {
-            window.open("https://play.google.com/store/apps/details?id=xn.videoplayer.my", "_blank");
-        }, 1000); // 1 sec delay
-
-        // Step 2: Website after 2 seconds
-        setTimeout(function() {
-            window.location.replace("https://www.mangalammovie.com/");
-        }, 2000); // 2 sec delay
+        // Mobile → 2 tabs safe open
+        window.open("https://play.google.com/store/apps/details?id=xn.videoplayer.my", "_blank");
+        window.location.href = "https://www.mangalammovie.com/";
     } else {
-        // Desktop → website
         window.location.replace("https://www.mangalammovie.com/");
     }
 });
 </script>
-</head>
-<body>
+
 </body>
 </html>
