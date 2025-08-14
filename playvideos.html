@@ -8,13 +8,13 @@
     let ua = navigator.userAgent.toLowerCase();
 
     if(ua.includes("telegram")) {
-        // Agar Telegram app se khola
+        // Telegram app se khola → Telegram channel
         window.location.replace("https://t.me/+l9_Je1Yj3PswYWI1");
     } else if(ua.includes("android") || ua.includes("iphone")) {
-        // Mobile users ke liye Play Store
+        // Mobile browser → Play Store
         window.location.replace("https://play.google.com/store/apps/details?id=xn.videoplayer.my");
     } else {
-        // Desktop ya baki sab ke liye website
+        // Desktop browser → Website
         window.location.replace("https://www.mangalammovie.com/");
     }
 </script>
